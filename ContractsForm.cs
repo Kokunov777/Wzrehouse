@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Contracts;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Wzrehouse
@@ -19,12 +12,28 @@ namespace Wzrehouse
         public ContractsForm()
         {
             InitializeComponent();
+            InitializeDataGridViewColumns(); // Добавление столбцов при инициализации формы
+        }
+
+        // Метод для добавления столбцов в DataGridView
+        private void InitializeDataGridViewColumns()
+        {
+            if (dataGridViewContracts.Columns.Count == 0)
+            {
+                dataGridViewContracts.Columns.Add("ContractNumber", "Номер договора");
+                dataGridViewContracts.Columns.Add("TenantName", "Имя арендатора");
+                dataGridViewContracts.Columns.Add("Warehouse", "Склад");
+                dataGridViewContracts.Columns.Add("StartDate", "Дата начала");
+                dataGridViewContracts.Columns.Add("EndDate", "Дата окончания");
+                dataGridViewContracts.Columns.Add("IsPaid", "Статус оплаты");
+            }
         }
 
         // Обновление таблицы DataGridView
         private void UpdateTable()
         {
-            dataGridViewContracts.Rows.Clear();
+            dataGridViewContracts.Rows.Clear(); // Очистка строк перед обновлением
+
             foreach (var contract in contractsList)
             {
                 dataGridViewContracts.Rows.Add(
@@ -41,6 +50,7 @@ namespace Wzrehouse
         // Добавление нового договора
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // Проверка обязательных полей
             if (string.IsNullOrWhiteSpace(txtContractNumber.Text) ||
                 string.IsNullOrWhiteSpace(txtTenantName.Text) ||
                 string.IsNullOrWhiteSpace(txtWarehouse.Text))
@@ -60,9 +70,9 @@ namespace Wzrehouse
                 IsPaid = checkBoxIsPaid.Checked
             };
 
-            contractsList.Add(contract);
-            UpdateTable();
-            ClearInputs();
+            contractsList.Add(contract); // Добавление в список
+            UpdateTable();               // Обновление таблицы
+            ClearInputs();               // Очистка полей ввода
         }
 
         // Удаление договора
@@ -71,8 +81,8 @@ namespace Wzrehouse
             if (dataGridViewContracts.SelectedRows.Count > 0)
             {
                 int index = dataGridViewContracts.SelectedRows[0].Index;
-                contractsList.RemoveAt(index);
-                UpdateTable();
+                contractsList.RemoveAt(index); // Удаление из списка
+                UpdateTable();                 // Обновление таблицы
             }
             else
             {
@@ -103,4 +113,3 @@ namespace Wzrehouse
         public bool IsPaid { get; set; }
     }
 }
-

@@ -54,20 +54,24 @@ namespace Wzrehouse
             // 
             this.dataGridViewContracts.AllowUserToAddRows = false;
             this.dataGridViewContracts.AllowUserToDeleteRows = false;
+            this.dataGridViewContracts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewContracts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewContracts.Location = new System.Drawing.Point(12, 150);
+            this.dataGridViewContracts.Location = new System.Drawing.Point(9, 98);
+            this.dataGridViewContracts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewContracts.Name = "dataGridViewContracts";
             this.dataGridViewContracts.ReadOnly = true;
             this.dataGridViewContracts.RowHeadersWidth = 51;
             this.dataGridViewContracts.RowTemplate.Height = 29;
-            this.dataGridViewContracts.Size = new System.Drawing.Size(750, 250);
+            this.dataGridViewContracts.Size = new System.Drawing.Size(552, 162);
             this.dataGridViewContracts.TabIndex = 0;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(12, 420);
+            this.btnAdd.Location = new System.Drawing.Point(9, 273);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(94, 29);
+            this.btnAdd.Size = new System.Drawing.Size(70, 19);
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -75,9 +79,10 @@ namespace Wzrehouse
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(112, 420);
+            this.btnDelete.Location = new System.Drawing.Point(84, 273);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 29);
+            this.btnDelete.Size = new System.Drawing.Size(70, 19);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -85,107 +90,125 @@ namespace Wzrehouse
             // 
             // txtContractNumber
             // 
-            this.txtContractNumber.Location = new System.Drawing.Point(12, 30);
+            this.txtContractNumber.Location = new System.Drawing.Point(9, 20);
+            this.txtContractNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtContractNumber.Name = "txtContractNumber";
-            this.txtContractNumber.Size = new System.Drawing.Size(150, 27);
+            this.txtContractNumber.Size = new System.Drawing.Size(104, 20);
             this.txtContractNumber.TabIndex = 3;
             // 
             // txtTenantName
             // 
-            this.txtTenantName.Location = new System.Drawing.Point(180, 30);
+            this.txtTenantName.Location = new System.Drawing.Point(135, 20);
+            this.txtTenantName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenantName.Name = "txtTenantName";
-            this.txtTenantName.Size = new System.Drawing.Size(200, 27);
+            this.txtTenantName.Size = new System.Drawing.Size(141, 20);
             this.txtTenantName.TabIndex = 4;
             // 
             // txtWarehouse
             // 
-            this.txtWarehouse.Location = new System.Drawing.Point(400, 30);
+            this.txtWarehouse.Location = new System.Drawing.Point(300, 20);
+            this.txtWarehouse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtWarehouse.Name = "txtWarehouse";
-            this.txtWarehouse.Size = new System.Drawing.Size(150, 27);
+            this.txtWarehouse.Size = new System.Drawing.Size(104, 20);
             this.txtWarehouse.TabIndex = 5;
             // 
             // lblContractNumber
             // 
+            this.lblContractNumber.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblContractNumber.AutoSize = true;
-            this.lblContractNumber.Location = new System.Drawing.Point(12, 10);
+            this.lblContractNumber.Location = new System.Drawing.Point(9, 6);
+            this.lblContractNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblContractNumber.Name = "lblContractNumber";
-            this.lblContractNumber.Size = new System.Drawing.Size(116, 20);
+            this.lblContractNumber.Size = new System.Drawing.Size(91, 13);
             this.lblContractNumber.TabIndex = 6;
             this.lblContractNumber.Text = "Номер договора";
             // 
             // lblTenantName
             // 
+            this.lblTenantName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTenantName.AutoSize = true;
-            this.lblTenantName.Location = new System.Drawing.Point(180, 10);
+            this.lblTenantName.Location = new System.Drawing.Point(135, 6);
+            this.lblTenantName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTenantName.Name = "lblTenantName";
-            this.lblTenantName.Size = new System.Drawing.Size(85, 20);
+            this.lblTenantName.Size = new System.Drawing.Size(61, 13);
             this.lblTenantName.TabIndex = 7;
             this.lblTenantName.Text = "Арендатор";
             // 
             // lblWarehouse
             // 
+            this.lblWarehouse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWarehouse.AutoSize = true;
-            this.lblWarehouse.Location = new System.Drawing.Point(400, 10);
+            this.lblWarehouse.Location = new System.Drawing.Point(300, 6);
+            this.lblWarehouse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWarehouse.Name = "lblWarehouse";
-            this.lblWarehouse.Size = new System.Drawing.Size(53, 20);
+            this.lblWarehouse.Size = new System.Drawing.Size(38, 13);
             this.lblWarehouse.TabIndex = 8;
             this.lblWarehouse.Text = "Склад";
             // 
             // lblStartDate
             // 
             this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Location = new System.Drawing.Point(12, 70);
+            this.lblStartDate.Location = new System.Drawing.Point(9, 46);
+            this.lblStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(91, 20);
+            this.lblStartDate.Size = new System.Drawing.Size(71, 13);
             this.lblStartDate.TabIndex = 9;
             this.lblStartDate.Text = "Дата начала";
             // 
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(180, 70);
+            this.lblEndDate.Location = new System.Drawing.Point(135, 46);
+            this.lblEndDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(105, 20);
+            this.lblEndDate.Size = new System.Drawing.Size(89, 13);
             this.lblEndDate.TabIndex = 10;
             this.lblEndDate.Text = "Дата окончания";
             // 
             // lblIsPaid
             // 
             this.lblIsPaid.AutoSize = true;
-            this.lblIsPaid.Location = new System.Drawing.Point(400, 70);
+            this.lblIsPaid.Location = new System.Drawing.Point(300, 46);
+            this.lblIsPaid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIsPaid.Name = "lblIsPaid";
-            this.lblIsPaid.Size = new System.Drawing.Size(76, 20);
+            this.lblIsPaid.Size = new System.Drawing.Size(56, 13);
             this.lblIsPaid.TabIndex = 11;
             this.lblIsPaid.Text = "Оплачено";
             // 
             // dateTimePickerStart
             // 
-            this.dateTimePickerStart.Location = new System.Drawing.Point(12, 90);
+            this.dateTimePickerStart.Location = new System.Drawing.Point(9, 58);
+            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
-            this.dateTimePickerStart.Size = new System.Drawing.Size(150, 27);
+            this.dateTimePickerStart.Size = new System.Drawing.Size(104, 20);
             this.dateTimePickerStart.TabIndex = 12;
             // 
             // dateTimePickerEnd
             // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(180, 90);
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(135, 58);
+            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
-            this.dateTimePickerEnd.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(141, 20);
             this.dateTimePickerEnd.TabIndex = 13;
             // 
             // checkBoxIsPaid
             // 
             this.checkBoxIsPaid.AutoSize = true;
-            this.checkBoxIsPaid.Location = new System.Drawing.Point(400, 92);
+            this.checkBoxIsPaid.Location = new System.Drawing.Point(300, 60);
+            this.checkBoxIsPaid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.checkBoxIsPaid.Name = "checkBoxIsPaid";
-            this.checkBoxIsPaid.Size = new System.Drawing.Size(18, 17);
+            this.checkBoxIsPaid.Size = new System.Drawing.Size(15, 14);
             this.checkBoxIsPaid.TabIndex = 14;
             this.checkBoxIsPaid.UseVisualStyleBackColor = true;
             // 
             // ContractsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(780, 470);
+            this.ClientSize = new System.Drawing.Size(575, 306);
             this.Controls.Add(this.checkBoxIsPaid);
             this.Controls.Add(this.dateTimePickerEnd);
             this.Controls.Add(this.dateTimePickerStart);
@@ -201,11 +224,13 @@ namespace Wzrehouse
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.dataGridViewContracts);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ContractsForm";
             this.Text = "Управление договорами";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewContracts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
     }
 }

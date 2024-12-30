@@ -16,47 +16,50 @@ namespace Wzrehouse
         public Form1()
         {
             InitializeComponent();
+            InitializeTabs();
         }
 
-        private void btnWarehouses_Click(object sender, EventArgs e)
+        private void InitializeTabs()
         {
-            WarehousesForm warehousesForm = new WarehousesForm();
-            warehousesForm.Show();
+            // Создаем TabControl
+            TabControl tabControl = new TabControl
+            {
+                Dock = DockStyle.Fill
+            };
+
+            // Создаем вкладки
+            TabPage warehouseTab = new TabPage("Склады");
+            TabPage goodsTab = new TabPage("Товары");
+            TabPage contractTab = new TabPage("Контракты");
+            TabPage clientTab = new TabPage("Клиенты");
+            TabPage reportsTab = new TabPage("Отчеты");
+
+            // Добавляем формы в каждую вкладку
+            warehouseTab.Controls.Add(CreateEmbeddedForm(new WarehousesForm()));
+            goodsTab.Controls.Add(CreateEmbeddedForm(new GoodsForm()));
+            contractTab.Controls.Add(CreateEmbeddedForm(new ContractsForm()));
+            clientTab.Controls.Add(CreateEmbeddedForm(new ClientsForm()));
+            reportsTab.Controls.Add(CreateEmbeddedForm(new ReportsForm()));
+
+            // Добавляем вкладки в TabControl
+            tabControl.TabPages.Add(warehouseTab);
+            tabControl.TabPages.Add(goodsTab);
+            tabControl.TabPages.Add(contractTab);
+            tabControl.TabPages.Add(clientTab);
+            tabControl.TabPages.Add(reportsTab);
+
+            // Добавляем TabControl в MainForm
+            this.Controls.Add(tabControl);
         }
 
-        private void btnInventory_Click(object sender, EventArgs e)
+        // Метод для внедрения формы в TabPage
+        private Control CreateEmbeddedForm(Form form)
         {
-            GoodsForm inventoryForm = new GoodsForm();
-            inventoryForm.Show();
-        }
-
-        private void btnContracts_Click(object sender, EventArgs e)
-        {
-            ContractsForm contractsForm = new ContractsForm();
-            contractsForm.Show();
-        }
-
-        private void btnReports_Click(object sender, EventArgs e)
-        {
-            ReportsForm reportsForm = new ReportsForm();
-            reportsForm.Show();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnClients_Click_1(object sender, EventArgs e)
-        {
-            ClientsForm clientsForm = new ClientsForm();
-            clientsForm.Show();
-        }
-
-        private void btnPayments_Click(object sender, EventArgs e)
-        {
-            PaymentsForm paymentsForm = new PaymentsForm();
-            paymentsForm.Show();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show();
+            return form;
         }
     }
 }
